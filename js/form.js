@@ -10,15 +10,21 @@ tombol.onclick = (e) => {
     const ta = document.getElementById("ta").value;
     const select = document.getElementById("select").value;
 
-    const data = {
+    if (nama === "" || email === "" || cn === "" || ta === "" || select === "") {
+      alert("Semua field harus diisi");
+      return false;
+  }
+  var data = JSON.parse(sessionStorage.getItem("dataInput")) || [];
+  data.push( {
         nama: nama,
         email: email,
         pembayaran: cb1 || cb2 || cb3,
         nomor: cn,
         info: select,
         note: ta,   
-    };
+    });
     sessionStorage.setItem("dataInput", JSON.stringify(data));
     alert("Berhasil beli");
     window.location.href = "hasilform.html";
+
 }
