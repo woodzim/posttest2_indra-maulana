@@ -9,47 +9,36 @@
 </head>
 <body style="background-color: #000000">
     <nav>
-		<a href="beranda.html"><img src="HAIM_LogoB.png" alt="" width="10%"></a>
+		<a href="beranda.html"><img src="img/HAIM_LogoB.png" alt="" width="10%"></a>
 		<a href="store.html" class="active">Store</a>
         <a href="event.html">Event</a>
         <a href="news.html">News</a>
 		<a href="aboutus.html">About Us</a>
+        <div class="login"><a href="login.html">LOGIN</a></div>
         <a href="#"></a>
 	</nav>
-        <fieldset class="belii">
-            <legend class="fdpm">YOUR INFO</legend>
-            <div class="payment">
-            <form action="/action_page.php" target="_blank">
-                <label for="">Name:</label><br>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="">Email:</label><br>
-                <input type="email" id="em" name="em"><br>
-                <label for="">Password:</label><br>
-                <input type="password" id="pwd" name="pwd"><br><br>
-                Gender : <input type="radio"/>Male <input type="radio"/>Female <br><br>
-                <input type="submit" value="Submit">
-        <input type="reset">
-                </fieldset>
-              </form><br><br>
-            </div>
             <fieldset class="belii2">
                 <legend class="fdpm">PAYMENT</legend>
             <div class="payment">
             <form action="/action_page.php" target="_blank">
+                <label for="">Name:</label><br>
+                <input type="text" id="nama"><br><br>
+                <label for="">Email:</label><br>
+                <input type="email" id="em" name="em"><br><br>
                 Payment Method : <br>
-                <input type="checkbox" name="kr">Credit <br>
-                <input type="checkbox" name="dn">Dana <br>
-                <input type="checkbox" name="gp">Gopay <br><br>
+                <input type="checkbox" id="kr" value="Credit">Credit <br>
+                <input type="checkbox" id="dn" value="Dana">Dana <br>
+                <input type="checkbox" id="gp" value="Gopay">Gopay <br><br>
                 <label for="">Card Number:</label><br>
                 <input type="Number" id="nb" name="nb"><br>
-                <p>Proof of Payment : </p>
-                <input type="file"><br><br>
                 <p>Send Info On My Email : </p>
-                <select>
-                    <option value="Download">Yes Send me</option>
-                    <option value="Upload">No Don't Send me</option>
+                <select id="select">
+                    <option value="Yes Send Me">Yes Send me</option>
+                    <option value="No, Don't Send me">No Don't Send me</option>
                 </select> <br><br>
-                <input type="submit" value="Submit">
+                Note : <br>
+                <textarea id="ta" cols="50" rows="4" placeholder="Tulis pesan anda..."></textarea><br><br>
+                <input type="submit" id="Submit">
                 <input type="reset">
                 </fieldset>
               </form><br><br>
@@ -59,4 +48,5 @@
             <p>2023 Copyright Woodz_Im </p>
                     </footer>
 </body>
+<script src="js/form.js"></script>
 </html>
